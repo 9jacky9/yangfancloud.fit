@@ -57,8 +57,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.brand-logo-wrap, .brand-logo-wrap:visited,
-.btn, .btn:visited,
+.brand-logo-wrap, .brand-logo-wrap:visited, .brand-logo-wrap:hover,
+.btn, .btn:visited, .btn:hover, .btn:focus, .btn:active,
 .footer-link, .footer-link:visited {
   text-decoration: none;
 }
@@ -161,7 +161,8 @@ a:hover {
 }
 
 /* ================= BUTTONS ================= */
-.btn {
+.btn,
+a.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -171,32 +172,79 @@ a:hover {
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.3px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none !important;
 }
 
-.btn-solar-primary {
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:visited,
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn:visited {
+  text-decoration: none !important;
+}
+
+/* Primary Button (Solar Primary / btn-primary) */
+.btn-solar-primary,
+.btn-solar-primary:visited,
+.btn-primary,
+.btn-primary:visited,
+a.btn-solar-primary,
+a.btn-solar-primary:visited,
+a.btn-primary,
+a.btn-primary:visited {
   background: var(--gradient-sun);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   box-shadow: 0 4px 20px var(--primary-glow);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none !important;
 }
 
-.btn-solar-primary:hover {
+.btn-solar-primary:hover,
+.btn-solar-primary:focus,
+.btn-solar-primary:active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+a.btn-solar-primary:hover,
+a.btn-solar-primary:focus,
+a.btn-solar-primary:active,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active {
+  background: var(--gradient-sun);
+  color: #FFFFFF !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 94, 58, 0.4);
+  text-decoration: none !important;
 }
 
-.btn-solar-secondary {
+/* Secondary Button (Solar Secondary) */
+.btn-solar-secondary,
+.btn-solar-secondary:visited,
+a.btn-solar-secondary,
+a.btn-solar-secondary:visited {
   background: rgba(255, 255, 255, 0.05);
-  color: var(--secondary);
+  color: var(--secondary) !important;
   border: 1px solid var(--border-highlight);
+  text-decoration: none !important;
 }
 
-.btn-solar-secondary:hover {
+.btn-solar-secondary:hover,
+.btn-solar-secondary:focus,
+.btn-solar-secondary:active,
+a.btn-solar-secondary:hover,
+a.btn-solar-secondary:focus,
+a.btn-solar-secondary:active {
   background: rgba(255, 160, 0, 0.12);
   border-color: var(--secondary);
+  color: var(--secondary) !important;
+  text-decoration: none !important;
   transform: translateY(-2px);
 }
 
